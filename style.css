@@ -7,8 +7,8 @@
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 10px 9px -3px rgba(0, 0, 0, 0.1),
     0 4px 3px -2px rgba(0, 0, 0, 0.05);
-  --col-blue-1: hsl(256, 100%, 50%);
-  --col-red-1: rgb(216, 0, 245);
+  --col-blue-1: hsl(256, 100%, 42%);
+  --col-red-1: rgb(225, 0, 255);
   --col-light-1: hsl(200, 5%, 99%);
   --col-dark-1: hsl(200, 5%, 5%);
 }
@@ -97,7 +97,13 @@ ul {
   background-color: var(--col-light-1);
   margin: 40px auto;
   padding: 40px;
+
 }
+
+.card:nth-child(2) {
+  border-left: 10px solid var(--col-blue-1)
+}
+
 
 .btn-blue {
   text-decoration: none;
