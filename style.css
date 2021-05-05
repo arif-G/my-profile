@@ -1,0 +1,250 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+:root {
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 9px -3px rgba(0, 0, 0, 0.1),
+    0 4px 3px -2px rgba(0, 0, 0, 0.05);
+  --col-blue-1: hsl(256, 100%, 50%);
+  --col-red-1: rgb(216, 0, 245);
+  --col-light-1: hsl(200, 5%, 99%);
+  --col-dark-1: hsl(200, 5%, 5%);
+}
+
+body {
+  background-color: hsl(200, 20%, 93%);
+  color: hsl(229, 33%, 22%);
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+
+
+em {
+  color: var(--col-red-1);
+}
+
+h1,
+h2 {
+  color: var(--col-blue-1);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.inline-block {
+  display: inline-block;
+}
+.my-lg {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.rounded-sm {
+  border-radius: 5px;
+}
+.rounded-full {
+  border-radius: 50%;
+}
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+.text-center {
+  text-align: center;
+}
+
+.ts-all {
+  transition: all 0.15s ease;
+}
+
+.square-sm {
+  width: 30px;
+  height: 30px;
+}
+
+.bg-red {
+  background-color: var(--col-red-1);
+}
+.w-600 {
+  width: 600px;
+  max-width: 95%;
+}
+
+.card {
+  background-color: var(--col-light-1);
+  margin: 40px auto;
+  padding: 40px;
+}
+
+.btn-blue {
+  text-decoration: none;
+  color: white;
+  background-color: var(--col-blue-1);
+  padding: 0.5rem 1rem;
+  font-weight: 900;
+}
+
+.btn-blue:visited {
+  color: white;
+}
+
+.btn-blue:hover {
+  transform: translateY(-2px);
+  background-color: var(--col-red-1);
+  box-shadow: var(--shadow-lg);
+}
+.btn-blue:active {
+  transform: translateY(0px);
+  box-shadow: var(--shadow-sm);
+}
+
+.icon-link {
+  background-color: transparent;
+  color: var(--col-dark-1);
+  font-size: 3rem;
+}
+
+.icon-link:visited {
+  color: var(--col-dark-1);
+}
+
+.icon-link:hover {
+  color: var(--col-red-1);
+  transform: scale(1.1);
+}
+
+.img-small {
+  width: 100px;
+  height: 100px;
+}
+
+.secret-message {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  text-decoration: none;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  font-size: 13vw;
+  font-weight: 900;
+  text-shadow: var(--col-blue-1);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  transition: all 0.1s;
+  color: var(--col-red-1);
+  text-shadow: 0.125em 0.125em 0 hsla(219, 100%, 50%, 0.596);
+}
+
+.secret-message:visited {
+  color: var(--col-red-1);
+}
+
+@keyframes fadeout {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    font-size: 20vw;
+  }
+}
+
+@keyframes scale-easeOutElastic {
+  0% {
+    font-size: 13vw;
+  }
+
+  16% {
+    font-size: 16vw;
+  }
+
+  28% {
+    font-size: 21vw;
+  }
+
+  44% {
+    font-size: 18.5vw;
+  }
+
+  59% {
+    font-size: 21vw;
+  }
+
+  73% {
+    font-size: 19vw;
+  }
+
+  88% {
+    font-size: 20vw;
+  }
+
+  100% {
+    font-size: 20vw;
+  }
+}
+
+.secret-message:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  animation: "scale-easeOutElastic" 0.5s normal ease-out forwards;
+}
+
+.secret-message:target + .backdrop {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 990;
+}
+
+.profile {
+  background: linear-gradient(-45deg, #ff2da75e, #0770fa34),
+    url(images/profile.jpg) no-repeat top center;
+  background-size: cover;
+  filter: brightness(1.5) saturate(1.2);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    font-size: 16px;
+  }
+  .card {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .square-sm {
+    width: 20px;
+    height: 20px;
+  }
+}
